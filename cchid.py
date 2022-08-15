@@ -70,7 +70,7 @@ class CChidMod(loader.Module):
                 user = await message.client.get_entity(                
                 args if not args.isdigit() else int(args))
         except ValueError:           
-            user = await message.client.gek_entity(GetFullUserRequest(message.sender_id))
+            user = await message.client.get_entity(GetFullUserRequest(message.sender_id))
         
         user_id = f"""<b>🔥 Информация о <b><u>{text}</u></b>:</b>
 
@@ -123,7 +123,7 @@ class CChidMod(loader.Module):
                 user = await message.client.get_entity(                
                 args if not args.isdigit() else int(args))
         except ValueError:           
-            user = await message.client.gek_entity(GetFullUserRequest(message.sender_id))
+            user = await message.client.get_entity(GetFullUserRequest(message.sender_id))
         
         user_name = f"<b>🗄️ Информация:</b> Идентификационный номер <code>{text}</code> был обнаружен</b>\n"
         user_id = f"""<b>🆔 ID номер: <code>{user.id}</code></b>"""
