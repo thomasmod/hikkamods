@@ -35,7 +35,7 @@ request = """<code>Название: (название фильма)
 
 @loader.tds
 class CMovies(loader.Module):
-    """My favorite movies"""
+    """Просмотр лучших фильмов, отсортированных по жанрам"""
 
     strings = {
 		"name": "CMovies",
