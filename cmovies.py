@@ -1,8 +1,8 @@
+__version__ = (1, 2, 0)
 
-# ▀▀█▀▀ ▒█░▒█ ▒█▀▀▀█ ▒█▀▄▀█ ░█▀▀█ ▒█▀▀▀█ 
-# ░▒█░░ ▒█▀▀█ ▒█░░▒█ ▒█▒█▒█ ▒█▄▄█ ░▀▀▀▄▄ 
-# ░▒█░░ ▒█░▒█ ▒█▄▄▄█ ▒█░░▒█ ▒█░▒█ ▒█▄▄▄█
-# https://t.me/netuzb
+#            ▀█▀ █ █ █▀█ █▀▄▀█ ▄▀█ █▀
+#             █  █▀█ █▄█ █ ▀ █ █▀█ ▄█  
+#             https://t.me/netuzb
 #
 # 🔒 Licensed under the GNU AGPLv3
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
@@ -10,11 +10,9 @@
 # meta desc: Browse movies by genre and watch them online via bot
 # meta pic: https://te.legra.ph/file/386e8b541bb93f1537d1d.png
 # meta banner: https://i.imgur.com/ccA9WkZ.jpeg
-# meta developer: @netuzb
+# meta developer: @wilsonmods
 # scope: hikka_only
 # scope: hikka_min 1.3.0
-
-__version__ = (1, 0, 0)
 		
 from asyncio import sleep
 from ..inline.types import InlineCall
