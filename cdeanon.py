@@ -7,7 +7,7 @@ __version__ = (2, 4, 0)
 # 🔒 Licensed under the GNU AGPLv3
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
-# meta desc: Browse movies by genre and watch them online via bot
+# meta desc: Деанон пользователей со всех сетей 
 # meta pic: https://te.legra.ph/file/fb9f08e6256915a729a12.png
 # meta banner: https://te.legra.ph/file/d50815f35c08b9c3dcc90.jpg
 # meta developer: @wilsonmods
