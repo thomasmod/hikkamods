@@ -48,7 +48,7 @@ class KursModMod(loader.Module):
         text = utils.get_args_raw(message) 
         kurs_net = f"👇 The <b>«{text}» course currency</b> is shown below."
         await message.edit(kurs_net)
-        await sleep (10.0)
+        await sleep (1.8)
         await message.delete()
         try:
             text = utils.get_args_raw(message) 
