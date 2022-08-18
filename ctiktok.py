@@ -1,4 +1,4 @@
-__version__ = (1, 0, 0)
+__version__ = (1, 1, 0)
 
 #            ▀█▀ █ █ █▀█ █▀▄▀█ ▄▀█ █▀
 #             █  █▀█ █▄█ █ ▀ █ █▀█ ▄█  
@@ -22,7 +22,7 @@ class TikDownBotMod(loader.Module):
     """Upload video via TikTok link «Optimized»"""
     
     strings = {
-        "name": "CTikTok",
+        "name": "TikTok",
         "wilson_pls_wait": "🕒 <b>Please, wait...</b>",
         "wilson_pls_enter_a_link": "🚨 <b>Please provide a link for the TikTok video</b>",
         "wilson_done": "✅ <b>Done</b>",
@@ -36,11 +36,12 @@ class TikDownBotMod(loader.Module):
 
     async def tdcmd(self, message):
         """> [Link] just enter the link for the video"""
+        reply = await message.get_reply_message() 
         await utils.answer(message, self.strings("wilson_pls_wait", message))
         args = utils.get_args_raw(message)
         if not args:
             await utils.answer(message, self.strings("wilson_pls_enter_a_link", message))
             return
         r = await message.client.inline_query('tikdobot', args)
-        await message.client.send_file(message.to_id, r[1].result.content.url, caption=f"{self.strings('wilson_done')}")
+        await message.client.send_file(message.to_id, r[1].result.content.url, caption=f"{self.strings('wilson_done')}", reply_to=reply.id if reply else None)
         await message.delete()
