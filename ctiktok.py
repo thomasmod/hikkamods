@@ -43,5 +43,5 @@ class TikDownBotMod(loader.Module):
             await utils.answer(message, self.strings("wilson_pls_enter_a_link", message))
             return
         r = await message.client.inline_query('tikdobot', args)
-        await message.client.send_file(message.to_id, r[1].result.content.url, caption=f"{self.strings('wilson_done')}", reply_to=reply.id if reply else None)
+        await message.client.send_file(message.to_id, r[1].result.content.url, caption=f"{self.strings('wilson_done')} | <code>{args}</code>", reply_to=reply.id if reply else None)
         await message.delete()
