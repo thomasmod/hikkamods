@@ -4,3 +4,4 @@ cdeanon
 cchid
 kursinfo
 ctiktok
+crename
