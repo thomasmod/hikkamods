@@ -27,7 +27,7 @@ class ReanemerMod(loader.Module):
 	"""Rename file name"""
 	
 	strings = {
-	           "name": "CRenamer",
+	           "name": "Fast Rename",
 			   "wilson_no_reply": wilson_warn + "<b>Reply to file?</b>",
 			   "wilson_no_name": wilson_fire + "<b>What's the name?</b>",
 			   "wilson_wait": wilson_wait + "<b>Please, wait...</b>",
