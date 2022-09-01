@@ -6,3 +6,4 @@ kursinfo
 ctiktok
 crename
 atelegraph
+mygallery
