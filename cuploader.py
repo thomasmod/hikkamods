@@ -1,4 +1,4 @@
-__version__ = (3, 3, 10)
+__version__ = (3, 4, 0)
           
 #            ▀█▀ █ █ █▀█ █▀▄▀█ ▄▀█ █▀
 #             █  █▀█ █▄█ █ ▀ █ █▀█ ▄█  
@@ -36,18 +36,35 @@ class UploadToProviderMod(loader.Module):
 
     strings = {
         "name": "CUploader",        
+        "noargs": "🚫 <b>File not specified</b>",
+        "err": "🚫 <b>loading error</b>", 
+        "uploaded": '🌄 <b>File uploaded successfully.</b>\n',
+        "imgur_blocked": "🚫 <b>Unblock @ImgUploadBot</b>",
+        "not_an_image": "🚫 <b>This platform only supports images</b>",
+        "to_module": "🔥 <b>Direct link for the install module:</b>",
+        "_cmd_doc_imgur": "Upload to imgur.com",
+        "_cmd_doc_oxo": "Upload to 0x0.st",
+        "_cmd_doc_x0": "Upload to x0.at",
+        "_cmd_doc_skynet": "Upload to SkyNet decentralized platform",
+        "_cls_doc": "Upload files to different hosting",
+        "uploading": "🚀 <b>Loading...</b>",
+        "yopish": "🔻 Close",
+    }
+    
+    strings_ru = {      
         "noargs": "🚫 <b>Файл не указан</b>",
         "err": "🚫 <b>Ошибка загрузки</b>", 
         "uploaded": '🌄 <b>Файл успешно загружен.</b>\n',
         "imgur_blocked": "🚫 <b>Разблокируй @ImgUploadBot</b>",
         "not_an_image": "🚫 <b>Эта платформа поддерживает только изображения</b>",
+        "to_module": "🔥 <b>Прямая ссылка для установки модуля:</b>",
         "_cmd_doc_imgur": "Загрузить на imgur.com",
         "_cmd_doc_oxo": "Загрузить на 0x0.st",
         "_cmd_doc_x0": "Загрузить на x0.at",
         "_cmd_doc_skynet": "Загрузить на децентрализованную платформу SkyNet",
         "_cls_doc": "Загружает файлы на различные хостинги",
         "uploading": "🚀 <b>Загрузка...</b>",
-        "yopish": "🔻 Закрыть",
+        "yopish": "🔻 Закрыть",        
     }
 
     async def get_media(self, message: Message):
@@ -109,7 +126,7 @@ class UploadToProviderMod(loader.Module):
             await utils.answer(message, self.strings("err"))
             return
         
-        sky = f"<code>https://siasky.net/{skynet.json()['skylink']}</code>"
+        sky = f"<code>https://siasky.net/{skynet.json()['skylink']}</code>\n\n{self.strings('to_module')}\n<code>.dlmod https://siasky.net/{skynet.json()['skylink']}</code>"
         await self.inline.form(
                     self.strings("uploaded", message) + sky,
                     reply_markup=[
