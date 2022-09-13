@@ -39,7 +39,7 @@ class CDeanonMod(loader.Module):
   "bajarildi": emoji_sirena + (
       "<b>User <code>{}</code> has been successfully deanonymized,"
       " \n   — I remind you that the name of the user.  must be written without «@»"
-      " \n\n🎨 <b>We are here</b>:"
+      " \n\n🎨 We are here</b>:"
       " <a href='t.me/wilsonmods'>Wilson Hikkamods</a>"
       ),
   "info": emoji_sirena + ( 
