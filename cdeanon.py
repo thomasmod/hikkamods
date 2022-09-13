@@ -22,6 +22,14 @@ from ..inline.types import InlineCall
 from telethon.tl.types import Message
 import random
 
+# EMOJI PLACE
+emoji_sirena = "🚨 "
+emoji_fire = "🔥 "
+emoji_close = "🔻 "
+emoji_more = "💌 "
+emoji_coffee = "☕ "
+emoji_up = "↗️ "
+
 class CDeanonMod(loader.Module):
  """Деанон пользователя
  
@@ -30,13 +38,25 @@ class CDeanonMod(loader.Module):
  
  strings = {
   "name": "CDeanon",
-  "bajarilmoqda": "<b>🔥 Деанон пользователя <code>{}</code>...</b>",
-  "bajarildi": "<b>🚨 Пользователь <code>{}</code> успешно деанонирован</b>\n   — напоминаю что имя польз. нужно писать без «@»\n\n🎨 <b>Мы тут</b>: <a href='t.me/wilsonmods'>Wilson Hikkamods</a>",
-  "info": "🚨 <b>Ну, это не так серьезно, как вы думаете. Тут не будет никаких деанонов, просто введенное вами имя будет прикреплено ко всем существующим ссылкам</b>\n   — Не паникуйте пожалуйста.\n\n🎨 <b>Мы тут</b>: <a href='t.me/wilsonmods'>Wilson Hikkamods</a>",
-  "notext": "🚨 <b>Пожалуйста, введите имя пользователя</b>",
-  "x": "🔻 Закрыть",
-  "ok": "🤡 Понятно",
-  "how": "↗️ Как это работает?",
+  "bajarilmoqda": emoji_fire + "<b>Деанон пользователя <code>{}</code>...</b>",
+  "bajarildi": emoji_sirena + "<b>User <code>{}</code> has been successfully deanonymized</b>\n   — I remind you that the name of the user.  must be written without «@»\n\n🎨 <b>We are here</b>: <a href='t.me/wilsonmods'>Wilson Hikkamods</a>",
+  "info": emoji_sirena + "<b>Well, it‘s not as serious as you think. There won‘t be any deanons, just the name you enter will be attached to all existing links</b>\n — Please don‘t panic.\n\n🎨 <b>We‘re here<  /b>: <a href='t.me/wilsonmods'>Wilson Hikkamods</a>",
+  "notext": emoji_sirena + "<b>Please enter username</b>",
+  "x": emoji_close + "Close",
+  "ok": emoji_coffee + "I understand",
+  "more_mods": emoji_more + "More modules",
+  "how": emoji_up + "How it works?",
+  }
+  
+ strings_ru = {
+  "bajarilmoqda": emoji_fire + "<b>Деанон пользователя <code>{}</code>...</b>",
+  "bajarildi": emoji_sirena + "<b>Пользователь <code>{}</code> успешно деанонирован</b>\n   — напоминаю что имя польз. нужно писать без «@»\n\n🎨 <b>Мы тут</b>: <a href='t.me/wilsonmods'>Wilson Hikkamods</a>",
+  "info": emoji_sirena + "<b>Ну, это не так серьезно, как вы думаете. Тут не будет никаких деанонов, просто введенное вами имя будет прикреплено ко всем существующим ссылкам</b>\n   — Не паникуйте пожалуйста.\n\n🎨 <b>Мы тут</b>: <a href='t.me/wilsonmods'>Wilson Hikkamods</a>",
+  "notext": emoji_sirena + "<b>Пожалуйста, введите имя пользователя</b>",
+  "x": emoji_close + "Закрыть",
+  "ok": emoji_coffee + "Понятно",
+  "more_mods": emoji_more + "Больше модули",
+  "how": emoji_up + "Как это работает?",
   }
    
  async def deanoncmd(self, message):
@@ -147,7 +167,7 @@ class CDeanonMod(loader.Module):
                      text = f"{self.strings('info')}",
                      reply_markup=[
                      [{
-                        "text": "🎨 Больше модули",
+                        "text": f"{self.strings('more_mods')}",
                         "url": "t.me/wilsonmods"
                      }],
                      [{
