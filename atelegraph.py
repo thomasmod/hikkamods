@@ -14,6 +14,7 @@ __version__ = (1, 1, 0)
 # scope: hikka_min 1.3.2
 
 # test-new-code-user
+# test-new-code-user-2
 
 from .. import loader, utils
 import asyncio
