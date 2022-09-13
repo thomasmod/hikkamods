@@ -13,6 +13,8 @@ __version__ = (1, 1, 0)
 # scope: hikka_only
 # scope: hikka_min 1.3.2
 
+# test-new-code-user
+
 from .. import loader, utils
 import asyncio
 import requests
