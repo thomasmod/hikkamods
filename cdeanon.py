@@ -31,15 +31,17 @@ emoji_coffee = "☕ "
 emoji_up = "↗️ "
 
 class CDeanonMod(loader.Module):
- """Деанон пользователя
- 
-> Надеюсь вам понравятся...
-> И другие модули: @wilsonmods"""
+ """Anyone can be deanoned, just enter your Telegram username"""
  
  strings = {
   "name": "CDeanon",
   "bajarilmoqda": emoji_fire + "<b>Деанон пользователя <code>{}</code>...</b>",
-  "bajarildi": emoji_sirena + "<b>User <code>{}</code> has been successfully deanonymized</b>\n   — I remind you that the name of the user.  must be written without «@»\n\n🎨 <b>We are here</b>: <a href='t.me/wilsonmods'>Wilson Hikkamods</a>",
+  "bajarildi": emoji_sirena + (
+      "<b>User <code>{}</code> has been successfully deanonymized,"
+      " \n   — I remind you that the name of the user.  must be written without «@»"
+      " \n\n🎨 <b>We are here</b>:"
+      " <a href='t.me/wilsonmods'>Wilson Hikkamods</a>"
+      ),
   "info": emoji_sirena + ( 
       "<b>Well, it‘s not as serious as you think. There won‘t be any deanons,"
       " just the name you enter will be attached to all existing links"
@@ -55,12 +57,17 @@ class CDeanonMod(loader.Module):
   
  strings_ru = {
   "bajarilmoqda": emoji_fire + "<b>Деанон пользователя <code>{}</code>...</b>",
-  "bajarildi": emoji_sirena + "<b>Пользователь <code>{}</code> успешно деанонирован</b>\n   — напоминаю что имя польз. нужно писать без «@»\n\n🎨 <b>Мы тут</b>: <a href='t.me/wilsonmods'>Wilson Hikkamods</a>",
+  "bajarildi": emoji_sirena + (
+      "<b>Пользователь <code>{}</code> успешно деанонирован</b>"
+      " \n   — напоминаю что имя польз. нужно писать без «@»"
+      " \n\n🎨 <b>Мы тут</b>:" 
+      " <a href='t.me/wilsonmods'>Wilson Hikkamods</a>"
+      ),
   "info": emoji_sirena + (
       "<b>Ну, это не так серьезно, как вы думаете. Тут не будет никаких деанонов,"
       " просто введенное вами имя будет прикреплено ко всем существующим ссылкам"
       " \n   — Не паникуйте пожалуйста.\n\n🎨 Мы тут</b>:"
-      " <a href='t.me/wilsonmods'>Wilson Hikkamods</a>"
+      " <a href='https://t.me/wilsonmods'>Wilson Hikkamods</a>"
       ),
   "notext": emoji_sirena + "<b>Пожалуйста, введите имя пользователя</b>",
   "x": emoji_close + "Закрыть",
@@ -68,9 +75,31 @@ class CDeanonMod(loader.Module):
   "more_mods": emoji_more + "Больше модули",
   "how": emoji_up + "Как это работает?",
   }
-   
- async def deanoncmd(self, message):
-  """> [username] без «@» деанон пользователя"""
+  
+ strings_uz = {
+  "bajarilmoqda": emoji_fire + "<b>Foydalanuvchi <code>{}</code> deanonlanmoqda...</b>",
+  "bajarildi": emoji_sirena + (
+      "<b>Foydalanuvchi <code>{}</code> muvaffaqiyatli deanonlandi</b>"
+      " \n   — eslatib o‘tamanki, foydalanuvchi nomi «@»siz yozilishi kerak."
+      " \n\n🎨 <b>Biz shu yerdamiz</b>:"
+      " <a href='https://t.me/wilsonmods'>Wilson Hikkamods</a>"
+      ),
+  "info": emoji_sirena + (
+      "<b>Xo‘sh, bu siz o‘ylaganchalik jiddiy emas. Umuman hackerlik bo'lmaydi,"
+      " siz kiritgan ism barcha mavjud havolalarga biriktiriladi"
+      " \n - Iltimos, vahimaga tushmang.\n\n🎨 Biz bu yerdamiz</b>:"
+      " <a href='t.me/wilsonmods'>Wilson Hikkamods</a>"
+      ),
+  "notext": emoji_sirena + "<b>Iltimos, foydalanuvchi nomini kiriting</b>",
+  "x": emoji_close + "Yopish",
+  "ok": emoji_coffee + "Tushundim",
+  "more_mods": emoji_more + "Qo‘shimcha modullar",
+  "how": emoji_up + "Bu qanday ishlaydi?",
+  }
+ 
+ @loader.command(ru_doc=("[юзернейм] - Без «@»"))
+ async def deanon(self, message):
+  """[username] - Without «@»"""
   
   text = utils.get_args_raw(message) 
   if not text: 
