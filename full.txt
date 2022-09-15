@@ -2,7 +2,6 @@ cmovies
 cuploader
 cdeanon
 cchid
-kursinfo
 ctiktok
 crename
 atelegraph
