@@ -22,7 +22,7 @@ class TikDownBotMod(loader.Module):
     """Upload video via TikTok link «Optimized»"""
     
     strings = {
-        "name": "TikTok",
+        "name": "💾 TikTok",
         "wilson_pls_wait": "🕒 <b>Please, wait...</b>",
         "wilson_pls_enter_a_link": "🚨 <b>Please provide a link for the TikTok video</b>",
         "wilson_done": "✅ <b>Done</b>",

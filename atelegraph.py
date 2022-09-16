@@ -1,4 +1,4 @@
-__version__ = (1, 1, 0)
+__version__ = (1, 1, 1)
           
 #            ▀█▀  █ █ █▀█  █▀▄▀█  ▄▀█ █▀
 #             █  █▀█ █▄█ █ ▀  █ █▀█ ▄█  
@@ -30,7 +30,7 @@ class ActuallTelegraphMod(loader.Module):
 	"""Uploading a photo/gif/picture to actuall telegraph"""
 	
 	strings = {
-               "name": "Actuall Telegraph",
+               "name": "📌 Actuall-Telegraph",
                "wilson_no_reply": wilson_warn + "<b>Reply to media file</b>",
                "wilson_done": wilson_media + "<b>The address where the media file is saved</b> |",
                "wilson_succes": wilson_link + "<b>Link ready</b>\n",

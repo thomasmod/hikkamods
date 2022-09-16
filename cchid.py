@@ -53,7 +53,7 @@ class CChidMod(loader.Module):
 > Надеюсь вам понравятся...
 > И другие модули: @wilsonmods"""
 
-    strings = {"name": "CChid"}
+    strings = {"name": "🆔 CChid"}
 
     async def client_ready(self, client, db):
         self.db = db

@@ -35,7 +35,7 @@ class MyGalleryMod(loader.Module):
     """> This is the module in which my pictures are collected"""
 
     strings = {
-            "name": "MyGallery",
+            "name": "🖼️ MyGallery",
             "_add_photo": emoji_photo + "Provide a link to add an image",
             "_main_text": emoji_write + "The main text can be spoken here",
             "tt_text": "<b>Select the required Tutorial type</b> 👇",

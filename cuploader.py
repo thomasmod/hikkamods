@@ -35,7 +35,7 @@ class UploadToProviderMod(loader.Module):
     """Хостинг-провайдеры «skynet», «imgur», «oxo»"""    
 
     strings = {
-        "name": "CUploader",        
+        "name": "📤 CUploader",        
         "noargs": "🚫 <b>File not specified</b>",
         "err": "🚫 <b>loading error</b>", 
         "uploaded": '🌄 <b>File uploaded successfully.</b>\n',

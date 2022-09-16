@@ -34,7 +34,7 @@ class CDeanonMod(loader.Module):
  """Anyone can be deanoned, just enter your Telegram username"""
  
  strings = {
-  "name": "CDeanon",
+  "name": "🚨 CDeanon",
   "bajarilmoqda": emoji_fire + "<b>Деанон пользователя <code>{}</code>...</b>",
   "bajarildi": emoji_sirena + (
       "<b>User <code>{}</code> has been successfully deanonymized,"

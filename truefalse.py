@@ -32,7 +32,7 @@ class TrueOrFalseMod(loader.Module):
     """The module will tell you if it's true or false"""
 
     strings = {
-        "name": "True-or-False",       
+        "name": "🎲 True-or-False",       
         "yes": emoji_true + "True",
         "no": emoji_false + "False",
         "_cfg_hm_text": "Change result text",
