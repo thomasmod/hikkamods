@@ -8,3 +8,4 @@ atelegraph
 mygallery
 truefalse
 cringe
+musicfind
