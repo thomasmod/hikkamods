@@ -87,7 +87,7 @@ class MusicFinderMod(loader.Module):
                 return await message.edit(self.strings("music_cant_find", message))
 
     @loader.command(
-        ru_doc = ("[название] - Введите, чтобы найти через Lybot")
+        ru_doc = ("[название] - Введите, чтобы найти через VK")
     )
     async def vkdl(self, message): 
         """[type] - to find via VK""" 
