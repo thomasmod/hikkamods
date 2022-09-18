@@ -60,7 +60,7 @@ class MusicFinderMod(loader.Module):
         self._me = await client.get_me()
         
     @loader.command(
-        ru_doc = ("[name] - Введите, чтобы найти на Spotify")
+        ru_doc = ("[название] - Введите, чтобы найти на Spotify")
     )
     async def sptdl(self, message):
         """[type] - to find on Spotify"""
