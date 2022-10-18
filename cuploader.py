@@ -66,7 +66,23 @@ class UploadToProviderMod(loader.Module):
         "uploading": "🚀 <b>Загрузка...</b>",
         "yopish": "🔻 Закрыть",        
     }
-
+    
+    strings_uz = {      
+        "noargs": "🚫 <b>Fayl ko'rsatilmadi</b>",
+        "err": "🚫 <b>yuklashda xatolik</b>", 
+        "uploaded": '🌄 <b>Fayl muvaffaqiyatli yuklandi.</b>\n',
+        "imgur_blocked": "🚫 <b>@ImgUploadBot qora ro'yhatdan chiqaring!</b>",
+        "not_an_image": "🚫 <b>Bu platforma faqat rasmlarni yuklaydi!</b>",
+        "to_module": "🔥 <b>Modul o'rnatish uchun to'g'ridan-to'g'ri havola:</b>",
+        "_cmd_doc_imgur": "imgur.com hostiga yuklash",
+        "_cmd_doc_oxo": "0x0.st hostiga yuklash",
+        "_cmd_doc_x0": "x0.at hostiga yuklash",
+        "_cmd_doc_skynet": "Maxsuslashtirilgan SkyNet hostingiga yuklash",
+        "_cls_doc": "Duch kelgan hostinga yuklash",
+        "uploading": "🚀 <b>Yuklanmoqda...</b>",
+        "yopish": "🔻 Yopish",        
+    }
+	
     async def get_media(self, message: Message):
         reply = await message.get_reply_message()
         m = None
