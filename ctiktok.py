@@ -25,13 +25,19 @@ class TikDownBotMod(loader.Module):
         "name": "💾 TikTok",
         "wilson_pls_wait": "🕒 <b>Please, wait...</b>",
         "wilson_pls_enter_a_link": "🚨 <b>Please provide a link for the TikTok video</b>",
-        "wilson_done": "✅ <b>Done</b>",
+        "wilson_done": "✅ <b>Done!</b>",
         }
     
     strings_ru = {
         "wilson_pls_wait": "🕒 <b>Пожалуйста подождите...</b>",
         "wilson_pls_enter_a_link": "🚨 <b>Пожалуйста, дайте ссылку на видео TikTok</b>",
-        "wilson_done": "✅ <b>Готов",
+        "wilson_done": "✅ <b>Готов!",
+        }
+    
+    strings_uz = {
+        "wilson_pls_wait": "🕒 <b>Iltimoas, kuting...</b>",
+        "wilson_pls_enter_a_link": "🚨 <b>Iltimoas, TikTok uchun havolani ko'rsating</b>",
+        "wilson_done": "✅ <b>Tayyor!",
         }
 
     async def tdcmd(self, message):
