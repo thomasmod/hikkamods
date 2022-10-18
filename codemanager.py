@@ -58,8 +58,20 @@ class CodeManagerMod(loader.Module):
         "manager_pls_wait": em_wait + (
             "<b>Пожалуйста, дождитесь окончания...</b>"
         ),
-        "manager_code_name": "-code-manager.py",
-	}	
+	}
+	
+	strings_uz = {
+		"manager_reply_to_msg": em_warn + (
+		    "<b>Faylga konvertlash uchun kerakli"
+		    " habarga javob tariqasida...</b>"
+		),
+		"manager_reply_to_file": em_warn + (
+		    "<b>Faylga javob tariqasida...</b>"
+		),
+        "manager_pls_wait": em_wait + (
+            "<b>Iltimos, tayyor bo'lguncha kuting...</b>"
+        ),
+	}
 
 	async def client_ready(self, client, db):
 		self.client = client
