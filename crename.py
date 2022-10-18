@@ -44,6 +44,15 @@ class ReanemerMod(loader.Module):
 			   "wilson_down": wilson_fire + "<b>Скачивание »»</b>",
 			   "wilson_done": wilson_done + "<b>Готов</b>",
 			   }
+	
+	strings_uz = {
+			   "wilson_no_reply": wilson_warn + "<b>Faylga javob tariqasida?</b>",
+			   "wilson_no_name": wilson_fire + "<b>Qanday nom?</b>",
+			   "wilson_wait": wilson_wait + "<b>Iltimos, kuting...</b>",
+			   "wilson_load": wilson_fire + "<b>Yuborilmoqda »»</b>",
+			   "wilson_down": wilson_fire + "<b>Yuklanmoqda »»</b>",
+			   "wilson_done": wilson_done + "<b>Tayyor</b>",
+			   }
 			   
 	async def renamecmd(self, message):
 		"""> rename [name.format]"""
