@@ -54,6 +54,16 @@ class MusicFinderMod(loader.Module):
             ),
         }
     
+    strings_uz = {
+        "music_not_found": em_agr + "<b>Topilmadi</b>",
+        "music_searching": em_search + "<b>Musiqa qidirilmoqda...</b>",
+        "music_found": em_violin + "<i>Topildi!",
+        "music_cant_find": em_agr + (
+            "<b>Musiqa topilmadi, balkim siz"
+            " nomini xato yozgandirsiz?</b>"
+            ),
+        }
+    
     async def client_ready(self, client, db):
         self.client = client
         self._db = db
