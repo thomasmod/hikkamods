@@ -43,6 +43,16 @@ class RandomCringeMod(loader.Module):
             ),
         }
     
+    strings_uz = {
+        "done": "<b>✅ Tayyor!</b>",
+        "add_photo_tutorial": (
+            "Bu yerda siz cheksizlik miqdorda"
+            " Cringe surtlarini joylay olasiz. Joylash uchun"
+            " «➕ Elenent q'shish» orqali rasmga havola ko'rsating"
+            " (formatlar .jpg, .png, .webp va boshqa)"
+            ),
+        }
+    
     def __init__(self):
         self.config = loader.ModuleConfig(            
             loader.ConfigValue(
