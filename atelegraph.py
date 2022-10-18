@@ -50,6 +50,16 @@ class ActuallTelegraphMod(loader.Module):
                "wilson_view": wilson_view + "Посмотреть",
                "wilson_share": wilson_share + "Share",
                }
+	
+	strings_uz = {
+               "wilson_no_reply": wilson_warn + "<b>Kerakli faylga javob tariqasida</b>",
+               "wilson_done": wilson_media + "<b>Quyidagi manzilga sizning faylingiz joylandi</b> |",
+               "wilson_succes": wilson_link + "<b>Havola tayyor</b>\n",
+               "wilson_wait": wilson_rocket + "<b>Yuklanmoqda...</b>",
+               "wilson_close": wilson_warn + "Yopish",
+               "wilson_view": wilson_view + "ko'rish",
+               "wilson_share": wilson_share + "Ulashish",
+               }
 
 	def __init__(self):
 	    self.config = loader.ModuleConfig(
