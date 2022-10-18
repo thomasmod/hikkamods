@@ -43,6 +43,12 @@ class TrueOrFalseMod(loader.Module):
         "no": emoji_false + "Ложь",
         "_cfg_hm_text": "Изменить текст результата",
     }
+    
+    strings_uz = {        
+        "yes": emoji_true + "Rost",
+        "no": emoji_false + "Yolg'on",
+        "_cfg_hm_text": "Natija bandi yozuvini o'zgartirish",
+    }
 
     def __init__(self):
         self.config = loader.ModuleConfig(                        
