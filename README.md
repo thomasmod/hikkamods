@@ -3,5 +3,5 @@
 hikka modules based on my authorship
 
 # if you have any questions
-<a href="https://t.me/netuzb">• my Telegram</a><br>
-<a href="https://instagram.com/_temur.erkinov">• my Instagram</a><br>
+My ~ <a href="https://t.me/netuzb">Telegram</a><br>
+My ~ <a href="https://instagram.com/_temur.positive">Instagram</a><br>
